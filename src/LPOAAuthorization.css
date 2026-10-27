@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --google-bg: #121212;
+  --google-surface: #1e1f20;
+  --google-surface-alt: #282a2c;
+  --google-border: #3c4043;
+  --google-border-subtle: #2d2f31;
+  
+  --google-text: #e8eaed;
+  --google-text-secondary: #9aa0a6;
+  --google-text-muted: #5f6368;
+  
+  --google-blue: #1a73e8;
+  --google-blue-hover: #1b66c9;
+  --google-blue-light: #8ab4f8;
+  --google-green: #34a853;
+  --google-yellow: #fbbc04;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--google-bg);
+  color: var(--google-text);
+  font-family: 'Google Sans', 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Page Center Layout */
+.google-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  background: var(--google-bg);
+}
+
+/* Main Google Card Modal */
+.google-card {
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--google-surface);
+  border: 1px solid var(--google-border);
+  border-radius: 24px;
+  padding: 2.25rem 2.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Brand Header */
+.google-card-header {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.google-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.google-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1a73e8;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.google-brand-name {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--google-text-secondary);
+}
+
+.google-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+.google-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--google-text-secondary);
+  margin: 0;
+}
+
+/* Simple Bullet Summary (Google Style) */
+.google-summary-box {
+  background: var(--google-surface-alt);
+  border: 1px solid var(--google-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.google-summary-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.google-summary-item:last-child {
+  margin-bottom: 0;
+}
+
+.google-dot {
+  color: var(--google-blue-light);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Scrollable Terms & Conditions Box (Classic Google Style) */
+.google-terms-box {
+  background: #141517;
+  border: 1px solid var(--google-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  max-height: 280px;
+  overflow-y: auto;
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: #c4c7c5;
+  margin-bottom: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #5f6368 transparent;
+}
+
+.google-terms-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.google-terms-box::-webkit-scrollbar-thumb {
+  background-color: #5f6368;
+  border-radius: 4px;
+}
+
+.google-terms-heading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 1.25rem 0 0.4rem 0;
+  letter-spacing: -0.01em;
+}
+
+.google-terms-heading:first-child {
+  margin-top: 0;
+}
+
+.google-terms-para {
+  margin: 0 0 0.75rem 0;
+}
+
+.google-terms-table {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px 0 10px 0;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Target Platforms Row */
+.google-section-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.google-platforms-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--google-surface-alt);
+  border: 1px solid var(--google-border);
+  border-radius: 10px;
+}
+
+.google-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.8125rem;
+  color: var(--google-text);
+}
+
+.google-checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--google-blue);
+  cursor: pointer;
+}
+
+.google-platform-sub {
+  color: var(--google-text-secondary);
+  font-size: 0.75rem;
+}
+
+/* Simple Consent Checkboxes */
+.google-consent-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.75rem;
+}
+
+.google-consent-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--google-text-secondary);
+}
+
+.google-consent-row input[type="checkbox"] {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  max-width: 18px;
+  max-height: 18px;
+  margin: 2px 0 0 0;
+  accent-color: var(--google-blue);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.google-consent-row span {
+  flex: 1 1 auto;
+}
+
+.google-consent-row span strong {
+  color: #ffffff;
+}
+
+/* Button Actions Row (Google Style) */
+.google-actions-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--google-border);
+  padding-top: 1.25rem;
+  gap: 12px;
+}
+
+.google-btn-text {
+  background: none;
+  border: none;
+  color: var(--google-blue-light);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.google-btn-text:hover {
+  background: rgba(138, 180, 248, 0.08);
+}
+
+.google-btn-primary {
+  background-color: var(--google-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.google-btn-primary:hover:not(:disabled) {
+  background-color: var(--google-blue-hover);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.google-btn-primary:disabled {
+  background-color: #3c4043;
+  color: #80868b;
+  cursor: not-allowed;
+}
+
+/* Success View */
+.google-success-box {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.google-success-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(52, 168, 83, 0.15);
+  color: var(--google-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1rem;
+}
+
+.google-success-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.google-success-desc {
+  font-size: 0.875rem;
+  color: var(--google-text-secondary);
+  line-height: 1.5;
+  margin: 0 auto 1.5rem;
+  max-width: 440px;
+}
+
+.google-btn-secondary {
+  background: transparent;
+  color: #dadce0;
+  border: 1px solid var(--google-border);
+  border-radius: 20px;
+  padding: 9px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.google-btn-secondary:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #5f6368;
+}
+
+.google-btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.google-error-banner {
+  background-color: rgba(234, 67, 53, 0.12);
+  border: 1px solid rgba(234, 67, 53, 0.3);
+  color: #f28b82;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-info-banner {
+  background-color: rgba(138, 180, 248, 0.1);
+  border: 1px solid rgba(138, 180, 248, 0.25);
+  color: #8ab4f8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+  margin-bottom: 1.25rem;
+}
+
+.google-user-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--google-border-subtle);
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  color: var(--google-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.google-user-chip strong {
+  color: #ffffff;
+}
+
+.google-user-switch-btn {
+  background: none;
+  border: none;
+  color: var(--google-blue-light);
+  font-size: 0.75rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 6px;
+}
+
+.google-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .google-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  .google-platforms-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
